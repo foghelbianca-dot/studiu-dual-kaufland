@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studiezi, lucrezi și câștigi simultan. Primul program de studiu dual universitar Kaufland × UAB Alba Iulia. 41 locuri disponibile, burse 1.500–2.000 lei/lună.">
+    <title>Studiu Dual Universitar × Kaufland | EDMUNDO</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0F1729;
+            --blue: #1E3A8A;
+            --red: #E31837;
+            --red-dark: #B91C1C;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --text: #1E293B;
+            --muted: #64748B;
+            --border: #E2E8F0;
+            --gold: #F59E0B;
+        }
+
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.6; }
+
+        /* ─── NAV ─── */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--white); border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo img { height: 44px; width: auto; display: block; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--red); }
+        .nav-cta { background: var(--red); color: white !important; padding: 0.5rem 1.25rem; border-radius: 6px; font-weight: 600 !important; }
+        .nav-cta:hover { background: var(--red-dark) !important; }
+
+        /* ─── URGENCY BANNER ─── */
+        .urgency-banner {
+            background: #FEF3C7; border-bottom: 2px solid #F59E0B;
+            padding: 0.6rem 2rem; text-align: center;
+            font-size: 0.9rem; font-weight: 600; color: #92400E;
+        }
+        .urgency-banner span { color: #B45309; }
+
+        /* ─── HERO ─── */
+        .hero {
+            background: linear-gradient(135deg, #0F1729 0%, #1E3A8A 100%);
+            color: white; padding: 6rem 2rem 4rem; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: rgba(227,24,55,0.08); pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(227,24,55,0.2); border: 1px solid rgba(227,24,55,0.4);
+            color: #FCA5A5; padding: 0.35rem 1rem; border-radius: 100px;
+            font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900;
+            line-height: 1.1; margin-bottom: 1.25rem; letter-spacing: -1px;
+        }
+        .hero h1 em { font-style: normal; color: #FCA5A5; }
+        .hero-sub { font-size: 1.2rem; color: #CBD5E1; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.5; }
+        .hero-stats { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat-number { display: block; font-size: 2rem; font-weight: 800; color: var(--gold); }
+        .hero-stat-label { font-size: 0.8rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hero-proof { display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 0.6rem 1.25rem; font-size: 0.9rem; color: #CBD5E1; margin-bottom: 2.5rem; line-height: 1.5; }
+        .hero-proof strong { color: white; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+
+        .btn-primary {
+            background: var(--red); color: white; padding: 0.875rem 2rem; border-radius: 8px;
+            font-size: 1rem; font-weight: 700; text-decoration: none; border: none; cursor: pointer;
+            transition: background 0.2s, transform 0.1s; display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+        .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: white; padding: 0.875rem 2rem; border-radius: 8px;
+            font-size: 1rem; font-weight: 600; text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.3); cursor: pointer; transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+        .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.05); }
+        .partner-logos { display: flex; justify-content: center; align-items: center; gap: 2rem; opacity: 0.7; }
+        .partner-logos span { font-size: 0.8rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; }
+        .partner-logo-text { font-size: 1.1rem; font-weight: 800; color: white; }
+
+        /* ─── SECTIONS ─── */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-label { text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--red); margin-bottom: 0.75rem; }
+        .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; color: var(--primary); margin-bottom: 1rem; letter-spacing: -0.5px; }
+        .section-desc { font-size: 1.1rem; color: var(--muted); max-width: 600px; line-height: 1.6; }
+
+        /* ─── CE ESTE DUAL ─── */
+        .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+        .dual-split { border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+        .dual-half { padding: 2.5rem 2rem; }
+        .dual-half:first-child { background: var(--blue); border-radius: 12px 12px 0 0; }
+        .dual-half:last-child { background: var(--red); border-radius: 0 0 12px 12px; }
+        .dual-percent { font-size: 3.5rem; font-weight: 900; color: white; line-height: 1; }
+        .dual-label { font-size: 1rem; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 0.25rem; }
+        .dual-desc { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-top: 0.5rem; line-height: 1.5; }
+        .dual-points { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+        .dual-points li { display: flex; gap: 1rem; align-items: flex-start; }
+        .dual-point-icon { width: 42px; height: 42px; background: rgba(227,24,55,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .dual-point-icon svg { width: 20px; height: 20px; stroke: var(--red); stroke-width: 1.75; }
+        .dual-point-title { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+        .dual-point-desc { font-size: 0.85rem; color: var(--muted); margin-top: 0.15rem; line-height: 1.5; }
+
+        /* ─── PROGRAMS ─── */
+        #programe { background: var(--light); }
+        .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .program-card {
+            background: white; border-radius: 16px; overflow: hidden;
+            border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .program-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .program-card.featured { border: 2px solid var(--red); }
+        .program-header { padding: 1.5rem 1.5rem 0; }
+        .program-badge { display: inline-block; padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; }
+        .badge-retail { background: #DBEAFE; color: #1E40AF; }
+        .badge-logistica { background: #DCFCE7; color: #166534; }
+        .badge-robotica { background: #FEF3C7; color: #92400E; }
+        .urgent-badge { display: inline-block; background: #FEE2E2; color: #991B1B; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 100px; margin-left: 0.5rem; }
+        .program-title { font-size: 1.2rem; font-weight: 800; color: var(--primary); line-height: 1.3; margin-bottom: 0.25rem; }
+        .program-faculty { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.25rem; }
+        .program-divider { height: 1px; background: var(--border); margin: 0 1.5rem; }
+        .program-details { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
+        .program-detail { display: flex; align-items: flex-start; gap: 0.75rem; }
+        .detail-icon { width: 22px; text-align: center; flex-shrink: 0; margin-top: 2px; display: flex; align-items: flex-start; justify-content: center; }
+        .detail-icon svg { width: 15px; height: 15px; stroke: var(--muted); stroke-width: 2; flex-shrink: 0; margin-top: 2px; }
+        .detail-text { font-size: 0.875rem; color: var(--text); }
+        .detail-text strong { font-weight: 700; }
+        .program-footer { padding: 1.25rem 1.5rem; border-top: 1px solid var(--border); display: flex; gap: 0.75rem; }
+        .btn-card-primary { flex: 1; background: var(--red); color: white; padding: 0.7rem 1rem; border-radius: 8px; font-size: 0.875rem; font-weight: 700; text-decoration: none; text-align: center; border: none; cursor: pointer; transition: background 0.2s; }
+        .btn-card-primary:hover { background: var(--red-dark); }
+        .btn-card-secondary { flex: 1; background: transparent; color: var(--text); padding: 0.7rem 1rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-decoration: none; text-align: center; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; }
+        .btn-card-secondary:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* ─── BENEFITS ─── */
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .benefit-card { background: white; border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); }
+        .benefit-card--featured { grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; gap: 2rem; background: linear-gradient(135deg, #0F1729 0%, #1E3A8A 100%); border-color: transparent; }
+        .benefit-card--featured .benefit-title { color: white; font-size: 1.15rem; }
+        .benefit-card--featured .benefit-desc { color: #CBD5E1; }
+        .benefit-card--featured .benefit-desc strong { color: #F59E0B; }
+        .benefit-icon--gold { background: rgba(245,158,11,0.15) !important; flex-shrink: 0; }
+        .benefit-icon--gold svg { stroke: #F59E0B !important; width: 28px !important; height: 28px !important; }
+        .benefit-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(227,24,55,0.07); border-radius: 12px; margin-bottom: 1.25rem; }
+        .benefit-icon svg { width: 24px; height: 24px; stroke: var(--red); stroke-width: 1.75; }
+        .benefit-title { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+        .benefit-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+
+        /* ─── TIMELINE ─── */
+        .timeline-section { background: var(--primary); color: white; }
+        .timeline-section .section-title { color: white; }
+        .timeline-section .section-desc { color: #94A3B8; }
+        .years-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .year-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; }
+        .year-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #64748B; margin-bottom: 0.5rem; }
+        .year-title { font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 1.5rem; }
+        .year-split { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+        .year-bar { height: 10px; border-radius: 5px; flex: 1; }
+        .bar-study { background: #3B82F6; }
+        .bar-practice { background: var(--red); }
+        .year-legend { display: flex; justify-content: center; gap: 1.5rem; font-size: 0.8rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.4rem; color: #94A3B8; }
+        .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+        .year-desc { font-size: 0.85rem; color: #94A3B8; line-height: 1.6; margin-top: 1rem; }
+
+        /* ─── CALENDAR ─── */
+        #calendar { background: var(--light); }
+        .calendar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+        .calendar-column h3 { font-size: 1.05rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+        .calendar-steps { display: flex; flex-direction: column; }
+        .calendar-step { display: flex; gap: 1rem; padding-bottom: 1.5rem; position: relative; }
+        .calendar-step:not(:last-child)::after { content: ''; position: absolute; left: 19px; top: 42px; width: 2px; height: calc(100% - 16px); background: var(--border); }
+        .step-dot { width: 40px; height: 40px; border-radius: 50%; background: white; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700; color: var(--muted); z-index: 1; }
+        .step-dot.urgent { background: #FEE2E2; border-color: var(--red); color: var(--red); }
+        .step-dot.active { background: var(--red); border-color: var(--red); color: white; }
+        .step-content { padding-top: 0.4rem; }
+        .step-date { font-size: 0.75rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.5px; }
+        .step-title { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin-top: 0.1rem; }
+        .step-desc { font-size: 0.8rem; color: var(--muted); margin-top: 0.1rem; line-height: 1.5; }
+
+        /* ─── PARTNERS ─── */
+        .partners-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+        .partner-card { background: var(--light); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+        .partner-name { font-size: 1.6rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem; }
+        .partner-sub { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
+        .partner-stats { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .partner-stat { text-align: center; }
+        .partner-stat-num { font-size: 1.5rem; font-weight: 900; color: var(--red); display: block; }
+        .partner-stat-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* ─── CARIERE ─── */
+        #cariere { background: var(--light); }
+        .cariere-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .cariere-card { background: white; border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); display: flex; gap: 1.25rem; align-items: flex-start; }
+        .cariere-icon { width: 44px; height: 44px; background: rgba(227,24,55,0.07); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .cariere-icon svg { width: 22px; height: 22px; stroke: var(--red); stroke-width: 1.75; }
+        .cariere-track { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--red); margin-bottom: 0.4rem; }
+        .cariere-roles { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; line-height: 1.4; }
+        .cariere-note { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+        .cariere-bottom { display: flex; justify-content: center; gap: 4rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+        .cariere-stat { text-align: center; }
+        .cariere-stat-num { display: block; font-size: 2rem; font-weight: 900; color: var(--primary); }
+        .cariere-stat-lbl { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* ─── FORM ─── */
+        #contact { background: var(--primary); }
+        .form-container { max-width: 700px; margin: 0 auto; text-align: center; }
+        .form-container .section-title { color: white; }
+        .form-container .section-desc { color: #94A3B8; margin: 0 auto 3rem; }
+        .contact-form { background: white; border-radius: 16px; padding: 2.5rem; text-align: left; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+        .form-group.full { margin-bottom: 1.25rem; }
+        .form-label { font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; }
+        .form-input, .form-select, .form-textarea {
+            padding: 0.75rem 1rem; border: 1.5px solid var(--border); border-radius: 8px;
+            font-size: 0.95rem; color: var(--text); background: white; transition: border-color 0.2s;
+            font-family: inherit; width: 100%;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(227,24,55,0.1); }
+        .form-textarea { resize: vertical; min-height: 100px; }
+        .form-scarcity { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 0.65rem 1rem; font-size: 0.85rem; color: #92400E; margin-bottom: 1rem; text-align: center; }
+        .form-submit { width: 100%; background: var(--red); color: white; padding: 1rem; border-radius: 8px; font-size: 1rem; font-weight: 700; border: none; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+        .form-submit:hover { background: var(--red-dark); }
+        .form-privacy { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 1rem; line-height: 1.5; }
+        .form-privacy a { color: var(--muted); }
+
+        /* ─── FAQ ─── */
+        .faq-list { max-width: 800px; margin: 3rem auto 0; }
+        .faq-item { border-bottom: 1px solid var(--border); }
+        .faq-question { width: 100%; background: none; border: none; padding: 1.25rem 0; text-align: left; font-size: 1rem; font-weight: 600; color: var(--primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; }
+        .faq-question:hover { color: var(--red); }
+        .faq-arrow { flex-shrink: 0; font-size: 1.2rem; transition: transform 0.2s; color: var(--muted); }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); color: var(--red); }
+        .faq-answer { display: none; padding: 0 0 1.25rem; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+
+        /* ─── FOOTER ─── */
+        footer { background: #050B18; color: #94A3B8; padding: 3rem 2rem; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+        .footer-brand img { height: 36px; width: auto; filter: brightness(0) invert(1); }
+        .footer-text { font-size: 0.8rem; line-height: 1.6; margin-top: 0.4rem; }
+        .footer-links { display: flex; gap: 2rem; list-style: none; }
+        .footer-links a { color: #94A3B8; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-links a:hover { color: white; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.25rem; }
+            .nav-links { display: none; }
+            section { padding: 3.5rem 1.25rem; }
+            .dual-grid, .programs-grid, .benefits-grid, .years-grid, .calendar-grid, .partners-grid, .cariere-grid { grid-template-columns: 1fr; }
+            .benefit-card--featured { flex-direction: column; }
+            .cariere-bottom { gap: 2rem; flex-wrap: wrap; }
+            .form-row { grid-template-columns: 1fr; }
+            .contact-form { padding: 1.5rem; }
+            .hero-stats { gap: 1rem; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+    <div class="nav-logo"><img src="edmundo-logo.jpg" alt="EDMUNDO. A World of Education"></div>
+    <ul class="nav-links">
+        <li><a href="#despre">Despre program</a></li>
+        <li><a href="#programe">Specializări</a></li>
+        <li><a href="#beneficii">Beneficii</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#contact" class="nav-cta">Aplică acum</a></li>
+    </ul>
+</nav>
+
+<!-- ─── URGENCY BANNER ─── -->
+<div class="urgency-banner">
+    Termen limită Robotică &amp; Automatizări: <strong><span>15 mai 2026</span> · 4 locuri disponibile</strong>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">✦ Studiu Dual Universitar × Kaufland × UAB Alba Iulia</div>
+        <h1>Înveți.<br>Lucrezi.<br><em>Experiență + salariu.</em></h1>
+        <p class="hero-sub">Primul program de studiu dual universitar din România: diplomă acreditată, practică reală și salariu lunar plătit de Kaufland din prima zi de facultate.</p>
+        <div class="hero-proof">82 de candidați. 33 selectați. <strong>Primii studenți plătiți să învețe în retail din România.</strong></div>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">41</span>
+                <span class="hero-stat-label">Locuri disponibile</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">1.500–2.000</span>
+                <span class="hero-stat-label">Lei/lună salariu</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">50/50</span>
+                <span class="hero-stat-label">Teorie + Practică</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">3</span>
+                <span class="hero-stat-label">Ani program</span>
+            </div>
+        </div>
+
+        <div class="hero-ctas">
+            <a href="#contact" class="btn-primary">Aplică acum →</a>
+            <a href="#programe" class="btn-outline">Descoperă specializările</a>
+        </div>
+
+        <div class="partner-logos">
+            <span>în parteneriat cu</span>
+            <span class="partner-logo-text">KAUFLAND</span>
+            <span style="color: #64748B;">×</span>
+            <span class="partner-logo-text">UAB ALBA IULIA</span>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CE ESTE STUDIUL DUAL ─── -->
+<section id="despre">
+    <div class="container">
+        <p class="section-label">Conceptul</p>
+        <h2 class="section-title">Ce este Studiul Dual Universitar?</h2>
+        <p class="section-desc">Un model educațional avansat, deja validat în Europa de Vest, care îmbină teoria academică cu practica remunerată în companie. Simultan, nu consecutiv.</p>
+
+        <div class="dual-grid">
+            <div class="dual-split">
+                <div class="dual-half" style="background: #1E3A8A;">
+                    <div class="dual-percent">50%</div>
+                    <div class="dual-label">Teorie academică</div>
+                    <div class="dual-desc">Cursuri, seminarii și laboratoare la Universitatea „1 Decembrie 1918" din Alba Iulia, cu diplomă acreditată de Ministerul Educației.</div>
+                </div>
+                <div class="dual-half" style="background: #E31837;">
+                    <div class="dual-percent">50%</div>
+                    <div class="dual-label">Practică în Kaufland</div>
+                    <div class="dual-desc">Activitate remunerată în magazine sau centre logistice Kaufland, sub îndrumarea unui mentor dedicat din prima zi.</div>
+                </div>
+            </div>
+
+            <ul class="dual-points">
+                <li>
+                    <div class="dual-point-icon"><i data-lucide="banknote"></i></div>
+                    <div>
+                        <div class="dual-point-title">Salariu din facultate</div>
+                        <div class="dual-point-desc">1.500–2.000 lei/lună, 12 luni pe an, pe toată durata studiilor, indiferent de vacanțe. Te întreții singur, fără să alegi între facultate și un job.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dual-point-icon"><i data-lucide="graduation-cap"></i></div>
+                    <div>
+                        <div class="dual-point-title">Diplomă de licență acreditată</div>
+                        <div class="dual-point-desc">Recunoscută de MEN, cu supliment la diplomă care atestă toate competențele dobândite. Mai mult decât o diplomă standard.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dual-point-icon"><i data-lucide="users"></i></div>
+                    <div>
+                        <div class="dual-point-title">Mentorat dublu</div>
+                        <div class="dual-point-desc">Un tutor din companie + un coordonator academic. Nu ești singur în parcurs. Ai ghidaj constant din ambele medii.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dual-point-icon"><i data-lucide="trending-up"></i></div>
+                    <div>
+                        <div class="dual-point-title">Inserție profesională directă</div>
+                        <div class="dual-point-desc">La absolvire ai deja 3 ani de experiență reală. Perioada de 1–2 ani de formare post-angajare se reduce radical față de traseul clasic.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dual-point-icon"><i data-lucide="file-check"></i></div>
+                    <div>
+                        <div class="dual-point-title">Vechime profesională recunoscută</div>
+                        <div class="dual-point-desc">Perioada de practică intră în calculul vechimii. Un avantaj real și rar față de orice alt traseu academic.</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PROGRAME ─── -->
+<section id="programe">
+    <div class="container">
+        <p class="section-label">Specializări disponibile 2026</p>
+        <h2 class="section-title">Alege programul potrivit pentru tine</h2>
+        <p class="section-desc">3 specializări unice în România, fiecare cu un traseu distinct de carieră în ecosistemul Kaufland. <strong>Toate locurile sunt bugetate</strong> — nu plătești taxe de studiu. Locuri limitate.</p>
+
+        <div class="programs-grid">
+
+            <!-- RETAIL -->
+            <div class="program-card">
+                <div class="program-header">
+                    <span class="program-badge badge-retail">Management în Retail</span>
+                    <h3 class="program-title">Management în Retail</h3>
+                    <div class="program-faculty">Facultatea de Științe Economice, UAB</div>
+                </div>
+                <div class="program-divider"></div>
+                <div class="program-details">
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="store"></i></span>
+                        <span class="detail-text"><strong>30 locuri</strong> disponibile</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="banknote"></i></span>
+                        <span class="detail-text"><strong>1.500 lei/lună</strong> salariu (12 luni/an)</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="map-pin"></i></span>
+                        <span class="detail-text">Magazine Kaufland Alba Iulia sau orașul tău de domiciliu</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="clock"></i></span>
+                        <span class="detail-text"><strong>3 ani</strong> · 180 credite ECTS</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="calendar"></i></span>
+                        <span class="detail-text">Înscrieri: <strong>6–16 iulie 2026</strong></span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="trending-up"></i></span>
+                        <span class="detail-text">Carieră: Șef de raion → Asistent Manager → Director Magazin</span>
+                    </div>
+                </div>
+                <div class="program-footer">
+                    <a href="#contact" class="btn-card-primary">Aplică acum</a>
+                    <a href="https://www.uab.ro/admitere/programe-de-studiu/facultatea-de-stiinte-economice/111-management-in-retail-dual/" target="_blank" class="btn-card-secondary">Detalii UAB ↗</a>
+                </div>
+            </div>
+
+            <!-- LOGISTICĂ -->
+            <div class="program-card">
+                <div class="program-header">
+                    <span class="program-badge badge-logistica">Logistică</span>
+                    <h3 class="program-title">Logistică Operațională</h3>
+                    <div class="program-faculty">Facultatea de Științe Economice, UAB</div>
+                </div>
+                <div class="program-divider"></div>
+                <div class="program-details">
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="warehouse"></i></span>
+                        <span class="detail-text"><strong>7 locuri</strong> disponibile</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="banknote"></i></span>
+                        <span class="detail-text"><strong>1.500 lei/lună</strong> + transport + masă gratuite</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="map-pin"></i></span>
+                        <span class="detail-text">Centru Logistic Kaufland, Turda</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="clock"></i></span>
+                        <span class="detail-text"><strong>3 ani</strong> · SAP, Power BI, RPA, EDI</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="calendar"></i></span>
+                        <span class="detail-text">Înscrieri: <strong>6–16 iulie 2026</strong></span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="trending-up"></i></span>
+                        <span class="detail-text">Carieră: Specialist sau Manager în Logistică</span>
+                    </div>
+                </div>
+                <div class="program-footer">
+                    <a href="#contact" class="btn-card-primary">Aplică acum</a>
+                    <a href="https://www.uab.ro/admitere/programe-de-studiu/facultatea-de-stiinte-economice/107-logistica-operationala-dual/" target="_blank" class="btn-card-secondary">Detalii UAB ↗</a>
+                </div>
+            </div>
+
+            <!-- ROBOTICĂ -->
+            <div class="program-card featured">
+                <div class="program-header">
+                    <div>
+                        <span class="program-badge badge-robotica">Robotică &amp; Tech</span>
+                        <span class="urgent-badge">⚠️ Deadline: 15 mai</span>
+                    </div>
+                    <h3 class="program-title">Robotică și Automatizări Industriale</h3>
+                    <div class="program-faculty">Facultatea de Informatică și Inginerie, UAB</div>
+                </div>
+                <div class="program-divider"></div>
+                <div class="program-details">
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="cpu"></i></span>
+                        <span class="detail-text"><strong>4 locuri</strong> disponibile (locuri limitate)</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="banknote"></i></span>
+                        <span class="detail-text"><strong>2.000 lei/lună</strong> + transport + masă gratuite</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="map-pin"></i></span>
+                        <span class="detail-text">Centru Logistic Kaufland, Turda</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="clock"></i></span>
+                        <span class="detail-text"><strong>4 ani</strong> · Sisteme embedded, automatizare procese</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="calendar"></i></span>
+                        <span class="detail-text">Aplicare până pe <strong style="color: #E31837;">15 mai 2026</strong>. Urgent!</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="trending-up"></i></span>
+                        <span class="detail-text">Carieră: Specialist / Manager Automatizări Industriale</span>
+                    </div>
+                </div>
+                <div class="program-footer">
+                    <a href="#contact" class="btn-card-primary">Aplică urgent →</a>
+                    <a href="https://www.uab.ro/admitere/programe-de-studiu/facultatea-de-informatica-si-inginerie/112-robotica-si-automatizari-industriale-dual/" target="_blank" class="btn-card-secondary">Detalii UAB ↗</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── BENEFICII ─── -->
+<section id="beneficii">
+    <div class="container">
+        <p class="section-label">De ce să alegi studiul dual</p>
+        <h2 class="section-title">Beneficii concrete,<br>nu promisiuni vagi</h2>
+        <p class="section-desc">Kaufland a investit în crearea unui model care produce valoare reală pentru studenți chiar din primul an de studii. Nu promisiuni pentru după absolvire.</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-icon"><i data-lucide="banknote"></i></span>
+                <div class="benefit-title">Salariu din facultate</div>
+                <div class="benefit-desc">1.500–2.000 lei/lună, 12 luni pe an, indiferent de vacanțe. Te întreții pe toată durata studiilor fără să alegi între facultate și un loc de muncă.</div>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><i data-lucide="users"></i></span>
+                <div class="benefit-title">Mentorat dublu</div>
+                <div class="benefit-desc">Un tutor din companie + un coordonator academic. Ghidaj constant din ambele medii. Nu ești singur la niciun moment al parcursului.</div>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><i data-lucide="graduation-cap"></i></span>
+                <div class="benefit-title">Diplomă acreditată MEN</div>
+                <div class="benefit-desc">Licență recunoscută de Ministerul Educației + supliment la diplomă + adeverință de practică. Mai mult decât orice diplomă standard.</div>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><i data-lucide="briefcase"></i></span>
+                <div class="benefit-title">Carieră directă în retail</div>
+                <div class="benefit-desc">La absolvire intri cu 3 ani de experiență reală. Perioada de formare post-angajare se reduce radical față de orice traseu clasic.</div>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><i data-lucide="bus"></i></span>
+                <div class="benefit-title">Transport + masă incluse</div>
+                <div class="benefit-desc">Pentru studenții de la Logistică și Robotică: transport și masă gratuite la Centrul Logistic din Turda. Zero costuri operaționale suplimentare.</div>
+            </div>
+            <div class="benefit-card benefit-card--featured">
+                <span class="benefit-icon benefit-icon--gold"><i data-lucide="zap"></i></span>
+                <div class="benefit-title">Tehnologii reale din an 1</div>
+                <div class="benefit-desc">SAP, Power BI, RPA, EDI, sisteme embedded. Instrumente pe care alți absolvenți le descoperă abia după angajare, tu le stăpânești deja. <strong>Cerute activ de angajatori din retail și logistică.</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PARCURSUL TĂU ─── -->
+<section class="timeline-section">
+    <div class="container">
+        <p class="section-label" style="color: #94A3B8;">Structura programului</p>
+        <h2 class="section-title">Cum arată parcursul tău</h2>
+        <p class="section-desc">Proporția teorie/practică evoluează progresiv: în primii ani construiești baza, în ultimii ani aplici la nivel avansat.</p>
+
+        <div class="years-grid">
+            <div class="year-card">
+                <div class="year-label">Primul an</div>
+                <div class="year-title">Fundamente</div>
+                <div class="year-split">
+                    <div class="year-bar bar-study" style="flex: 60;"></div>
+                    <div class="year-bar bar-practice" style="flex: 40;"></div>
+                </div>
+                <div class="year-legend">
+                    <div class="legend-item"><div class="legend-dot" style="background: #3B82F6;"></div> 60% Studii</div>
+                    <div class="legend-item"><div class="legend-dot" style="background: #E31837;"></div> 40% Practică</div>
+                </div>
+                <p class="year-desc">Baza academică solidă. Primele activități practice în companie sub supraveghere, integrare în fluxuri reale de lucru.</p>
+            </div>
+
+            <div class="year-card">
+                <div class="year-label">Anii 2 &amp; 3</div>
+                <div class="year-title">Specializare</div>
+                <div class="year-split">
+                    <div class="year-bar bar-study" style="flex: 40;"></div>
+                    <div class="year-bar bar-practice" style="flex: 60;"></div>
+                </div>
+                <div class="year-legend">
+                    <div class="legend-item"><div class="legend-dot" style="background: #3B82F6;"></div> 40% Studii</div>
+                    <div class="legend-item"><div class="legend-dot" style="background: #E31837;"></div> 60% Practică</div>
+                </div>
+                <p class="year-desc">Implicare crescută în activitate reală, proiecte independente, responsabilități sporite. Teoria devine competență verificată.</p>
+            </div>
+
+            <div class="year-card">
+                <div class="year-label">La absolvire</div>
+                <div class="year-title">Profesionist</div>
+                <div style="display: flex; justify-content: center; padding: 1.25rem 0;"><span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(245,158,11,0.15);"><i data-lucide="award" style="width:28px;height:28px;stroke:#F59E0B;stroke-width:1.5;"></i></span></div>
+                <p class="year-desc">Diplomă de licență + 3 ani experiență remunerată + vechime profesională recunoscută + acces direct la carieră în Kaufland.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CALENDAR ─── -->
+<section id="calendar">
+    <div class="container">
+        <p class="section-label">Când și cum aplici</p>
+        <h2 class="section-title">Calendar de admitere 2026</h2>
+        <p class="section-desc">Procesul de admitere diferă pe programe. Verifică termenele pentru specializarea care te interesează și pregătește-te din timp.</p>
+
+        <div class="calendar-grid">
+            <div class="calendar-column">
+                <h3>Management în Retail &amp; Logistică Operațională</h3>
+                <div class="calendar-steps">
+                    <div class="calendar-step">
+                        <div class="step-dot active">✦</div>
+                        <div class="step-content">
+                            <div class="step-date">Acum</div>
+                            <div class="step-title">Înscrie-te la EDMUNDO</div>
+                            <div class="step-desc">Completează formularul de mai jos. Te ghidăm pas cu pas prin toată procedura.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot">2</div>
+                        <div class="step-content">
+                            <div class="step-date">6–16 iulie 2026</div>
+                            <div class="step-title">Perioadă de înscriere</div>
+                            <div class="step-desc">Depunerea dosarului pe platforma cariere.kaufland.ro și la secretariatul UAB.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot">3</div>
+                        <div class="step-content">
+                            <div class="step-date">17 iulie 2026</div>
+                            <div class="step-title">Interviu motivațional</div>
+                            <div class="step-desc">Probe de aptitudini și interviu la UAB Alba Iulia.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot">4</div>
+                        <div class="step-content">
+                            <div class="step-date">18–25 iulie 2026</div>
+                            <div class="step-title">Rezultate &amp; înmatriculare</div>
+                            <div class="step-desc">Afișarea rezultatelor și înmatricularea candidaților admiși pe locuri finanțate sau cu taxă.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot" style="background: var(--blue); border-color: var(--blue); color: white;">✓</div>
+                        <div class="step-content">
+                            <div class="step-date">1 octombrie 2026</div>
+                            <div class="step-title">Start program</div>
+                            <div class="step-desc">Prima zi a noului tău parcurs profesional. Salariu din ziua 1.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-column">
+                <h3>Robotică &amp; Automatizări Industriale <span style="color: #E31837;">· Urgent</span></h3>
+                <div class="calendar-steps">
+                    <div class="calendar-step">
+                        <div class="step-dot urgent">!</div>
+                        <div class="step-content">
+                            <div class="step-date" style="color: #E31837;">Acum, max. 15 mai 2026</div>
+                            <div class="step-title">Depune aplicația: URGENT</div>
+                            <div class="step-desc">Termen limită de aplicare pe cariere.kaufland.ro: <strong>15 mai 2026</strong>. Doar 4 locuri disponibile.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot">2</div>
+                        <div class="step-content">
+                            <div class="step-date">Mai–Iulie 2026</div>
+                            <div class="step-title">Selecție candidați Kaufland</div>
+                            <div class="step-desc">Interviu online + evaluare la sediul Kaufland sau UAB.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot">3</div>
+                        <div class="step-content">
+                            <div class="step-date">24 aug – 11 sept 2026</div>
+                            <div class="step-title">Sesiunea de admitere septembrie</div>
+                            <div class="step-desc">Înscriere, probe, rezultate și înmatriculare la Facultatea de Informatică și Inginerie UAB.</div>
+                        </div>
+                    </div>
+                    <div class="calendar-step">
+                        <div class="step-dot" style="background: var(--blue); border-color: var(--blue); color: white;">✓</div>
+                        <div class="step-content">
+                            <div class="step-date">1 octombrie 2026</div>
+                            <div class="step-title">Start program</div>
+                            <div class="step-desc">Prima zi a celui mai tehnic program dual din România. 2.000 lei/lună salariu din start.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PARTENERI ─── -->
+<section id="parteneri">
+    <div class="container">
+        <p class="section-label">În spatele programului</p>
+        <h2 class="section-title">Parteneri cu anvergură</h2>
+        <p class="section-desc">Două instituții cu greutate, unite de aceeași misiune: un traseu educațional conectat la realitatea pieței muncii.</p>
+
+        <div class="partners-grid">
+            <div class="partner-card">
+                <div class="partner-name">Kaufland România</div>
+                <div class="partner-sub">Lanț de retail cu prezență națională și inițiatorul programului de studiu dual în România. Din 2005, Kaufland deschide 10–15 magazine noi pe an, o companie care investește în oameni înainte de a-i angaja.</div>
+                <div class="partner-stats">
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">20+</span>
+                        <span class="partner-stat-lbl">Ani în România</span>
+                    </div>
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">10–15</span>
+                        <span class="partner-stat-lbl">Magazine noi/an</span>
+                    </div>
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">33</span>
+                        <span class="partner-stat-lbl">Studenți prima ediție</span>
+                    </div>
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">150K+</span>
+                        <span class="partner-stat-lbl">Reach campanie 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-name">UAB Alba Iulia</div>
+                <div class="partner-sub">Universitatea „1 Decembrie 1918", instituție publică acreditată ARACIS cu calificativ „Înaltă Încredere", 5 facultăți, 4 școli doctorale și 190+ parteneriate internaționale Erasmus+.</div>
+                <div class="partner-stats">
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">1991</span>
+                        <span class="partner-stat-lbl">An fondare</span>
+                    </div>
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">5</span>
+                        <span class="partner-stat-lbl">Facultăți</span>
+                    </div>
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">800+</span>
+                        <span class="partner-stat-lbl">Locuri cămin</span>
+                    </div>
+                    <div class="partner-stat">
+                        <span class="partner-stat-num">190+</span>
+                        <span class="partner-stat-lbl">Parteneriate int.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CARIERE ─── -->
+<section id="cariere">
+    <div class="container">
+        <p class="section-label">Ce urmează după absolvire</p>
+        <h2 class="section-title">Oportunități de carieră</h2>
+        <p class="section-desc">Studenții care finalizează programul intră pe piața muncii cu 3 ani de experiență reală într-o companie de top. Nu încep de la zero.</p>
+
+        <div class="cariere-grid">
+            <div class="cariere-card">
+                <div class="cariere-icon"><i data-lucide="store"></i></div>
+                <div class="cariere-content">
+                    <div class="cariere-track">Management în Retail</div>
+                    <div class="cariere-roles">Șef de raion → Asistent Manager → Director Magazin</div>
+                    <div class="cariere-note">Structura ierarhică Kaufland permite avansare rapidă pentru absolvenții cu experiență dovedită.</div>
+                </div>
+            </div>
+            <div class="cariere-card">
+                <div class="cariere-icon"><i data-lucide="warehouse"></i></div>
+                <div class="cariere-content">
+                    <div class="cariere-track">Logistică Operațională</div>
+                    <div class="cariere-roles">Specialist Logistică → Coordonator Depozit → Manager Logistică</div>
+                    <div class="cariere-note">Competențe SAP, Power BI și EDI cerute activ în retail și distribuție la nivel național și internațional.</div>
+                </div>
+            </div>
+            <div class="cariere-card">
+                <div class="cariere-icon"><i data-lucide="cpu"></i></div>
+                <div class="cariere-content">
+                    <div class="cariere-track">Robotică &amp; Automatizări</div>
+                    <div class="cariere-roles">Specialist Automatizări → Inginer Sisteme → Manager Tehnic</div>
+                    <div class="cariere-note">Industria de automatizare crește accelerat în Europa. Profilul inginer + retail este extrem de rar și valoros.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cariere-bottom">
+            <div class="cariere-stat"><span class="cariere-stat-num">3 ani</span><span class="cariere-stat-lbl">experiență dovedită la angajare</span></div>
+            <div class="cariere-stat"><span class="cariere-stat-num">0 taxe</span><span class="cariere-stat-lbl">locuri bugetate, studii gratuite</span></div>
+            <div class="cariere-stat"><span class="cariere-stat-num">Kaufland+</span><span class="cariere-stat-lbl">piața de retail și logistică din RO</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FORM ─── -->
+<section id="contact">
+    <div class="container">
+        <div class="form-container">
+            <p class="section-label" style="color: #64748B;">Fă primul pas</p>
+            <h2 class="section-title">Fă primul pas spre studii cu adevărat practice:</h2>
+            <p class="section-desc">Verifică dacă ești eligibil. Un consultant EDMUNDO te sună în maxim 24h. Gratuit pentru candidați, fără obligații.</p>
+
+            <div class="contact-form">
+                <form id="main-form" onsubmit="handleSubmit(event)" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nume complet *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Ex: Maria Ionescu" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+40 7XX XXX XXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="program">Program interesat *</label>
+                            <select id="program" name="program" class="form-select" required>
+                                <option value="" disabled selected>Selectează un program</option>
+                                <option value="retail">Management în Retail (30 locuri)</option>
+                                <option value="logistica">Logistică Operațională (7 locuri)</option>
+                                <option value="robotica">Robotică &amp; Automatizări (4 locuri, urgent)</option>
+                                <option value="nedecis">Nu știu încă, vreau mai multe detalii</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label class="form-label" for="city">Oraș de domiciliu</label>
+                        <input type="text" id="city" name="city" class="form-input" placeholder="Ex: Cluj-Napoca">
+                    </div>
+
+                    <div class="form-group full">
+                        <label class="form-label" for="message">Întrebări sau mesaj (opțional)</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Ex: Am terminat liceul în 2025. Vreau să știu dacă mă pot înscrie la Logistică și dacă există cazare în Alba Iulia..."></textarea>
+                    </div>
+
+                    <div class="form-scarcity">Mai sunt <strong>41 locuri disponibile</strong> în total pe toate programele. Locurile se ocupă prin selecție.</div>
+
+                    <button type="submit" class="form-submit" id="submit-btn">
+                        Vreau să fiu contactat de consultant →
+                    </button>
+
+                    <p class="form-privacy">
+                        Datele tale sunt în siguranță. Nu le împărtășim cu terți.<br>
+                        Prin completarea formularului ești de acord cu <a href="#">Politica de confidențialitate</a> EDMUNDO.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section id="faq" style="background: var(--light);">
+    <div class="container">
+        <p class="section-label" style="text-align: center;">Întrebări frecvente</p>
+        <h2 class="section-title" style="text-align: center;">Ai întrebări? Avem răspunsuri.</h2>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Trebuie să fiu deja admis la UAB ca să aplic la studiul dual?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    Nu. Procesul de admitere se desfășoară în paralel: aplici la Kaufland prin cariere.kaufland.ro și la UAB separat. Candidații selectați de Kaufland urmează apoi admiterea la universitate. EDMUNDO te ghidează prin toți pașii, inclusiv pregătire pentru interviul motivațional.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Pot aplica dacă nu locuiesc în Alba Iulia?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    Da. UAB pune la dispoziție 800+ locuri de cazare în 5 cămine studențești cu standarde europene și o cantină modernă cu 200 locuri. Pentru Management în Retail, practica poate fi efectuată în magazinul Kaufland din orașul tău de domiciliu, acolo unde este posibil.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Ce se întâmplă dacă nu sunt angajat de Kaufland după absolvire?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    Absolvenții primesc diplomă de licență acreditată, supliment la diplomă, adeverință de practică și vechime profesională recunoscută, toate transferabile pe orice piață a muncii. Kaufland are un interes direct în angajarea absolvenților, dar diploma valorează independent de companie.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Pot aplica dacă am terminat liceul acum mai mulți ani?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    Da. În prima ediție (2025), vârsta studenților a variat între 19 și 43 de ani. Prima carieră, reconversia profesională și dorința de stabilitate au fost motive la fel de valide. Singura condiție de bază este absolvirea ciclului superior de liceu.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Salariul de 1.500/2.000 lei se plătește și în vacanțe?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    Da, salariul se acordă 12 luni pe an, pe toată durata programului, indiferent de vacanțe sau sesiuni universitare. Acesta este unul dintre avantajele clare față de un job part-time clasic.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    De ce să aplic prin EDMUNDO și nu direct?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    EDMUNDO îți oferă orientare personalizată pentru alegerea programului potrivit profilului tău, pregătire pentru interviul motivațional, asistență în completarea dosarului și follow-up pe tot parcursul procesului de admitere. Serviciul este complet gratuit pentru candidați.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand"><img src="edmundo-logo.jpg" alt="EDMUNDO"></div>
+            <p class="footer-text">Ghidul tău în educație și carieră.<br>© 2026 EDMUNDO. Toate drepturile rezervate.</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="https://cariere.kaufland.ro/inceputul-carierei/studiu-dual-universitar" target="_blank">Kaufland Cariere</a></li>
+            <li><a href="https://www.uab.ro" target="_blank">Universitatea UAB</a></li>
+            <li><a href="https://www.uab.ro/postari/475-admitere-licenta-calendarul-admiterii/" target="_blank">Calendar admitere</a></li>
+            <li><a href="#contact">Contact EDMUNDO</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+    // FAQ accordion
+    function toggleFaq(btn) {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    }
+
+    // Form submit handler
+    function handleSubmit(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn');
+        const form = document.getElementById('main-form');
+
+        // Basic validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const program = document.getElementById('program').value;
+
+        if (!name || !email || !phone || !program) {
+            alert('Te rog completează toate câmpurile obligatorii marcate cu *');
+            return;
+        }
+
+        // Success state
+        btn.textContent = '✓ Cerere trimisă! Te contactăm în maxim 24h.';
+        btn.style.background = '#16A34A';
+        btn.disabled = true;
+
+        // Here you would normally POST to your backend or CRM
+        // Example: fetch('/api/contact', { method: 'POST', body: new FormData(form) });
+    }
+
+    // Lucide icons
+    lucide.createIcons();
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const offset = 80; // nav height
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
