@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Studiezi, lucrezi și câștigi simultan. Primul program de studiu dual universitar Kaufland × UAB Alba Iulia. 41 locuri disponibile, burse 1.500–2.000 lei/lună.">
+    <meta name="description" content="Studiezi, lucrezi și primești bursă lunară simultan. Program de studiu dual universitar Kaufland × UAB Alba Iulia. 41 locuri bugetate, bursă 1.500–2.000 lei/lună.">
     <title>Studiu Dual Universitar × Kaufland | EDMUNDO</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,6 +36,11 @@
         .nav-links a:hover { color: var(--red); }
         .nav-cta { background: var(--red); color: white !important; padding: 0.5rem 1.25rem; border-radius: 6px; font-weight: 600 !important; }
         .nav-cta:hover { background: var(--red-dark) !important; }
+        .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .burger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+        .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .burger.open span:nth-child(2) { opacity: 0; }
+        .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
         /* ─── URGENCY BANNER ─── */
         .urgency-banner {
@@ -73,8 +78,8 @@
         .hero-stat { text-align: center; }
         .hero-stat-number { display: block; font-size: 2rem; font-weight: 800; color: var(--gold); }
         .hero-stat-label { font-size: 0.8rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; }
-        .hero-proof { display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 0.6rem 1.25rem; font-size: 0.9rem; color: #CBD5E1; margin-bottom: 2.5rem; line-height: 1.5; }
-        .hero-proof strong { color: white; }
+        .hero-proof { display: inline-block; background: rgba(227,24,55,0.15); border: 1px solid rgba(227,24,55,0.4); border-radius: 8px; padding: 0.65rem 1.4rem; font-size: 0.95rem; font-weight: 600; color: #FCA5A5; margin-bottom: 2.5rem; line-height: 1.5; letter-spacing: 0.01em; }
+        .hero-proof-star { color: #E31837; margin-right: 0.4rem; }
         .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
 
         .btn-primary {
@@ -151,12 +156,10 @@
         /* ─── BENEFITS ─── */
         .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
         .benefit-card { background: white; border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); }
-        .benefit-card--featured { grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; gap: 2rem; background: linear-gradient(135deg, #0F1729 0%, #1E3A8A 100%); border-color: transparent; }
-        .benefit-card--featured .benefit-title { color: white; font-size: 1.15rem; }
-        .benefit-card--featured .benefit-desc { color: #CBD5E1; }
-        .benefit-card--featured .benefit-desc strong { color: #F59E0B; }
-        .benefit-icon--gold { background: rgba(245,158,11,0.15) !important; flex-shrink: 0; }
-        .benefit-icon--gold svg { stroke: #F59E0B !important; width: 28px !important; height: 28px !important; }
+        .benefit-card--tech { background: #EFF6FF; border-color: #BFDBFE; }
+        .benefit-card--tech .benefit-title { color: #1E3A8A; }
+        .benefit-icon--blue { background: rgba(30,58,138,0.1) !important; }
+        .benefit-icon--blue svg { stroke: #1E3A8A !important; }
         .benefit-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(227,24,55,0.07); border-radius: 12px; margin-bottom: 1.25rem; }
         .benefit-icon svg { width: 24px; height: 24px; stroke: var(--red); stroke-width: 1.75; }
         .benefit-title { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
@@ -262,8 +265,12 @@
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 768px) {
-            nav { padding: 1rem 1.25rem; }
-            .nav-links { display: none; }
+            nav { padding: 1rem 1.25rem; flex-wrap: wrap; gap: 0; }
+            .burger { display: flex; }
+            .nav-links { display: none; width: 100%; flex-direction: column; gap: 0; padding: 0.5rem 0 1rem; }
+            .nav-links.open { display: flex; }
+            .nav-links li a { display: block; padding: 0.6rem 0; font-size: 1rem; border-bottom: 1px solid var(--border); }
+            .nav-links li:last-child a { border-bottom: none; }
             section { padding: 3.5rem 1.25rem; }
             .dual-grid, .programs-grid, .benefits-grid, .years-grid, .calendar-grid, .partners-grid, .cariere-grid { grid-template-columns: 1fr; }
             .benefit-card--featured { flex-direction: column; }
@@ -281,18 +288,21 @@
 <!-- ─── NAV ─── -->
 <nav>
     <div class="nav-logo"><img src="edmundo-logo.jpg" alt="EDMUNDO. A World of Education"></div>
-    <ul class="nav-links">
-        <li><a href="#despre">Despre program</a></li>
-        <li><a href="#programe">Specializări</a></li>
-        <li><a href="#beneficii">Beneficii</a></li>
-        <li><a href="#calendar">Calendar</a></li>
-        <li><a href="#contact" class="nav-cta">Aplică acum</a></li>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Meniu">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#despre" onclick="closeMenu()">Despre program</a></li>
+        <li><a href="#programe" onclick="closeMenu()">Specializări</a></li>
+        <li><a href="#beneficii" onclick="closeMenu()">Beneficii</a></li>
+        <li><a href="#calendar" onclick="closeMenu()">Calendar</a></li>
+        <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Aplică acum</a></li>
     </ul>
 </nav>
 
 <!-- ─── URGENCY BANNER ─── -->
 <div class="urgency-banner">
-    Termen limită Robotică &amp; Automatizări: <strong><span>15 mai 2026</span> · 4 locuri disponibile</strong>
+    Robotică &amp; Automatizări: <strong>admitere sesiune toamnă 2026</strong> · Management în Retail și Logistică: <strong>înscrieri <span>6–16 iulie 2026</span></strong>
 </div>
 
 <!-- ─── HERO ─── -->
@@ -300,8 +310,8 @@
     <div class="container">
         <div class="hero-badge">✦ Studiu Dual Universitar × Kaufland × UAB Alba Iulia</div>
         <h1>Înveți.<br>Lucrezi.<br><em>Experiență + salariu.</em></h1>
-        <p class="hero-sub">Primul program de studiu dual universitar din România: diplomă acreditată, practică reală și salariu lunar plătit de Kaufland din prima zi de facultate.</p>
-        <div class="hero-proof">82 de candidați. 33 selectați. <strong>Primii studenți plătiți să învețe în retail din România.</strong></div>
+        <p class="hero-sub">Program de studiu dual universitar în parteneriat cu Kaufland și UAB Alba Iulia: diplomă acreditată, practică reală și bursă lunară plătită de Kaufland din prima zi de facultate.</p>
+        <div class="hero-proof"><span class="hero-proof-star">✦</span> Primii studenți plătiți să învețe în retail din România.</div>
 
         <div class="hero-stats">
             <div class="hero-stat">
@@ -309,8 +319,8 @@
                 <span class="hero-stat-label">Locuri disponibile</span>
             </div>
             <div class="hero-stat">
-                <span class="hero-stat-number">1.500–2.000</span>
-                <span class="hero-stat-label">Lei/lună salariu</span>
+                <span class="hero-stat-number">1.500+</span>
+                <span class="hero-stat-label">Lei/lună bursă</span>
             </div>
             <div class="hero-stat">
                 <span class="hero-stat-number">50/50</span>
@@ -418,11 +428,11 @@
                 <div class="program-details">
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="store"></i></span>
-                        <span class="detail-text"><strong>30 locuri</strong> disponibile</span>
+                        <span class="detail-text"><strong>30 locuri</strong> bugetate (fără taxe de studiu)</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="banknote"></i></span>
-                        <span class="detail-text"><strong>1.500 lei/lună</strong> salariu (12 luni/an)</span>
+                        <span class="detail-text"><strong>Bursă 1.500 lei/lună</strong> · 12 luni/an</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="map-pin"></i></span>
@@ -433,17 +443,16 @@
                         <span class="detail-text"><strong>3 ani</strong> · 180 credite ECTS</span>
                     </div>
                     <div class="program-detail">
-                        <span class="detail-icon"><i data-lucide="calendar"></i></span>
-                        <span class="detail-text">Înscrieri: <strong>6–16 iulie 2026</strong></span>
+                        <span class="detail-icon"><i data-lucide="layers"></i></span>
+                        <span class="detail-text">Competențe: Management retail, merchandising, supply chain</span>
                     </div>
                     <div class="program-detail">
-                        <span class="detail-icon"><i data-lucide="trending-up"></i></span>
-                        <span class="detail-text">Carieră: Șef de raion → Asistent Manager → Director Magazin</span>
+                        <span class="detail-icon"><i data-lucide="calendar"></i></span>
+                        <span class="detail-text">Înscrieri: <strong>6–16 iulie 2026</strong> (vară) sau septembrie 2026 (toamnă)</span>
                     </div>
                 </div>
                 <div class="program-footer">
                     <a href="#contact" class="btn-card-primary">Aplică acum</a>
-                    <a href="https://www.uab.ro/admitere/programe-de-studiu/facultatea-de-stiinte-economice/111-management-in-retail-dual/" target="_blank" class="btn-card-secondary">Detalii UAB ↗</a>
                 </div>
             </div>
 
@@ -458,11 +467,11 @@
                 <div class="program-details">
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="warehouse"></i></span>
-                        <span class="detail-text"><strong>7 locuri</strong> disponibile</span>
+                        <span class="detail-text"><strong>7 locuri</strong> bugetate (fără taxe de studiu)</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="banknote"></i></span>
-                        <span class="detail-text"><strong>1.500 lei/lună</strong> + transport + masă gratuite</span>
+                        <span class="detail-text"><strong>Bursă 1.500 lei/lună</strong> + transport + masă gratuite</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="map-pin"></i></span>
@@ -470,20 +479,19 @@
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="clock"></i></span>
-                        <span class="detail-text"><strong>3 ani</strong> · SAP, Power BI, RPA, EDI</span>
+                        <span class="detail-text"><strong>3 ani</strong> · 180 credite ECTS</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="layers"></i></span>
+                        <span class="detail-text">Competențe: SAP, Power BI, RPA, EDI, logistică operațională</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="calendar"></i></span>
-                        <span class="detail-text">Înscrieri: <strong>6–16 iulie 2026</strong></span>
-                    </div>
-                    <div class="program-detail">
-                        <span class="detail-icon"><i data-lucide="trending-up"></i></span>
-                        <span class="detail-text">Carieră: Specialist sau Manager în Logistică</span>
+                        <span class="detail-text">Înscrieri: <strong>6–16 iulie 2026</strong> (vară) sau septembrie 2026 (toamnă)</span>
                     </div>
                 </div>
                 <div class="program-footer">
                     <a href="#contact" class="btn-card-primary">Aplică acum</a>
-                    <a href="https://www.uab.ro/admitere/programe-de-studiu/facultatea-de-stiinte-economice/107-logistica-operationala-dual/" target="_blank" class="btn-card-secondary">Detalii UAB ↗</a>
                 </div>
             </div>
 
@@ -492,7 +500,7 @@
                 <div class="program-header">
                     <div>
                         <span class="program-badge badge-robotica">Robotică &amp; Tech</span>
-                        <span class="urgent-badge">⚠️ Deadline: 15 mai</span>
+                        <span class="urgent-badge">Sesiune toamnă 2026</span>
                     </div>
                     <h3 class="program-title">Robotică și Automatizări Industriale</h3>
                     <div class="program-faculty">Facultatea de Informatică și Inginerie, UAB</div>
@@ -501,11 +509,11 @@
                 <div class="program-details">
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="cpu"></i></span>
-                        <span class="detail-text"><strong>4 locuri</strong> disponibile (locuri limitate)</span>
+                        <span class="detail-text"><strong>4 locuri</strong> bugetate (fără taxe de studiu)</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="banknote"></i></span>
-                        <span class="detail-text"><strong>2.000 lei/lună</strong> + transport + masă gratuite</span>
+                        <span class="detail-text"><strong>Bursă 2.000 lei/lună</strong> + transport + masă gratuite</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="map-pin"></i></span>
@@ -513,20 +521,19 @@
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="clock"></i></span>
-                        <span class="detail-text"><strong>4 ani</strong> · Sisteme embedded, automatizare procese</span>
+                        <span class="detail-text"><strong>4 ani</strong> · 240 credite ECTS</span>
+                    </div>
+                    <div class="program-detail">
+                        <span class="detail-icon"><i data-lucide="layers"></i></span>
+                        <span class="detail-text">Competențe: sisteme embedded, automatizare procese, robotică industrială</span>
                     </div>
                     <div class="program-detail">
                         <span class="detail-icon"><i data-lucide="calendar"></i></span>
-                        <span class="detail-text">Aplicare până pe <strong style="color: #E31837;">15 mai 2026</strong>. Urgent!</span>
-                    </div>
-                    <div class="program-detail">
-                        <span class="detail-icon"><i data-lucide="trending-up"></i></span>
-                        <span class="detail-text">Carieră: Specialist / Manager Automatizări Industriale</span>
+                        <span class="detail-text">Admitere: <strong>sesiune toamnă 2026</strong> (program în curs de autorizare)</span>
                     </div>
                 </div>
                 <div class="program-footer">
-                    <a href="#contact" class="btn-card-primary">Aplică urgent →</a>
-                    <a href="https://www.uab.ro/admitere/programe-de-studiu/facultatea-de-informatica-si-inginerie/112-robotica-si-automatizari-industriale-dual/" target="_blank" class="btn-card-secondary">Detalii UAB ↗</a>
+                    <a href="#contact" class="btn-card-primary">Înregistrează-ți interesul →</a>
                 </div>
             </div>
 
@@ -544,8 +551,8 @@
         <div class="benefits-grid">
             <div class="benefit-card">
                 <span class="benefit-icon"><i data-lucide="banknote"></i></span>
-                <div class="benefit-title">Salariu din facultate</div>
-                <div class="benefit-desc">1.500–2.000 lei/lună, 12 luni pe an, indiferent de vacanțe. Te întreții pe toată durata studiilor fără să alegi între facultate și un loc de muncă.</div>
+                <div class="benefit-title">Bursă lunară din facultate</div>
+                <div class="benefit-desc">De la 1.500 lei/lună, 12 luni pe an, indiferent de vacanțe. Te întreții pe toată durata studiilor fără să alegi între facultate și un loc de muncă.</div>
             </div>
             <div class="benefit-card">
                 <span class="benefit-icon"><i data-lucide="users"></i></span>
@@ -555,7 +562,7 @@
             <div class="benefit-card">
                 <span class="benefit-icon"><i data-lucide="graduation-cap"></i></span>
                 <div class="benefit-title">Diplomă acreditată MEN</div>
-                <div class="benefit-desc">Licență recunoscută de Ministerul Educației + supliment la diplomă + adeverință de practică. Mai mult decât orice diplomă standard.</div>
+                <div class="benefit-desc">Licență recunoscută de Ministerul Educației, supliment la diplomă și adeverință de practică — plus 3 ani de experiență reală în CV, de la absolvire.</div>
             </div>
             <div class="benefit-card">
                 <span class="benefit-icon"><i data-lucide="briefcase"></i></span>
@@ -567,10 +574,10 @@
                 <div class="benefit-title">Transport + masă incluse</div>
                 <div class="benefit-desc">Pentru studenții de la Logistică și Robotică: transport și masă gratuite la Centrul Logistic din Turda. Zero costuri operaționale suplimentare.</div>
             </div>
-            <div class="benefit-card benefit-card--featured">
-                <span class="benefit-icon benefit-icon--gold"><i data-lucide="zap"></i></span>
+            <div class="benefit-card benefit-card--tech">
+                <span class="benefit-icon benefit-icon--blue"><i data-lucide="zap"></i></span>
                 <div class="benefit-title">Tehnologii reale din an 1</div>
-                <div class="benefit-desc">SAP, Power BI, RPA, EDI, sisteme embedded. Instrumente pe care alți absolvenți le descoperă abia după angajare, tu le stăpânești deja. <strong>Cerute activ de angajatori din retail și logistică.</strong></div>
+                <div class="benefit-desc">SAP, Power BI, RPA, EDI, sisteme embedded. Instrumente pe care alți absolvenți le descoperă abia după angajare, tu le stăpânești deja.</div>
             </div>
         </div>
     </div>
@@ -742,8 +749,8 @@
                         <span class="partner-stat-lbl">Studenți prima ediție</span>
                     </div>
                     <div class="partner-stat">
-                        <span class="partner-stat-num">150K+</span>
-                        <span class="partner-stat-lbl">Reach campanie 2025</span>
+                        <span class="partner-stat-num">2025</span>
+                        <span class="partner-stat-lbl">Prima ediție lansată</span>
                     </div>
                 </div>
             </div>
@@ -787,7 +794,7 @@
                 <div class="cariere-content">
                     <div class="cariere-track">Management în Retail</div>
                     <div class="cariere-roles">Șef de raion → Asistent Manager → Director Magazin</div>
-                    <div class="cariere-note">Structura ierarhică Kaufland permite avansare rapidă pentru absolvenții cu experiență dovedită.</div>
+                    <div class="cariere-note">Kaufland deschide 10–15 magazine noi pe an în România. Absolvenții cu experiență dovedită intră direct pe poziții de conducere.</div>
                 </div>
             </div>
             <div class="cariere-card">
@@ -828,40 +835,68 @@
                 <form id="main-form" onsubmit="handleSubmit(event)" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label" for="name">Nume complet *</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Ex: Maria Ionescu" required>
+                            <label class="form-label" for="prenume">Prenume *</label>
+                            <input type="text" id="prenume" name="prenume" class="form-input" placeholder="Ex: Maria" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="email">Email *</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.com" required>
+                            <label class="form-label" for="name">Nume *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Ex: Ionescu" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.com" required>
+                        </div>
+                        <div class="form-group">
                             <label class="form-label" for="phone">Telefon *</label>
                             <input type="tel" id="phone" name="phone" class="form-input" placeholder="+40 7XX XXX XXX" required>
                         </div>
+                    </div>
+
+                    <div class="form-row">
                         <div class="form-group">
                             <label class="form-label" for="program">Program interesat *</label>
                             <select id="program" name="program" class="form-select" required>
                                 <option value="" disabled selected>Selectează un program</option>
                                 <option value="retail">Management în Retail (30 locuri)</option>
                                 <option value="logistica">Logistică Operațională (7 locuri)</option>
-                                <option value="robotica">Robotică &amp; Automatizări (4 locuri, urgent)</option>
+                                <option value="robotica">Robotică &amp; Automatizări (4 locuri)</option>
                                 <option value="nedecis">Nu știu încă, vreau mai multe detalii</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="clasa">Clasă / An absolvire *</label>
+                            <select id="clasa" name="clasa" class="form-select" required>
+                                <option value="" disabled selected>Selectează</option>
+                                <option value="9">Clasa a IX-a</option>
+                                <option value="10">Clasa a X-a</option>
+                                <option value="11">Clasa a XI-a</option>
+                                <option value="12">Clasa a XII-a (2026)</option>
+                                <option value="abs2025">Absolvent 2025</option>
+                                <option value="abs2024">Absolvent 2024 sau anterior</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-group full">
-                        <label class="form-label" for="city">Oraș de domiciliu</label>
-                        <input type="text" id="city" name="city" class="form-input" placeholder="Ex: Cluj-Napoca">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="city">Oraș de domiciliu *</label>
+                            <select id="city" name="city" class="form-select" required>
+                                <option value="" disabled selected>Selectează orașul</option>
+                                <option>Alba Iulia</option><option>Alexandria</option><option>Arad</option><option>Bacău</option><option>Baia Mare</option><option>Bistrița</option><option>Botoșani</option><option>Brăila</option><option>Brașov</option><option>București</option><option>Buzău</option><option>Călărași</option><option>Cluj-Napoca</option><option>Constanța</option><option>Craiova</option><option>Deva</option><option>Drobeta-Turnu Severin</option><option>Dej</option><option>Focșani</option><option>Galați</option><option>Giurgiu</option><option>Iași</option><option>Miercurea Ciuc</option><option>Oradea</option><option>Piatra Neamț</option><option>Pitești</option><option>Ploiești</option><option>Râmnicu Vâlcea</option><option>Reșița</option><option>Satu Mare</option><option>Sfântu Gheorghe</option><option>Sibiu</option><option>Slatina</option><option>Slobozia</option><option>Suceava</option><option>Târgoviște</option><option>Târgu Jiu</option><option>Târgu Mureș</option><option>Timișoara</option><option>Tulcea</option><option>Turda</option><option>Vaslui</option><option>Zalău</option><option>Alexandria</option><option>Altul</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="liceu">Liceu *</label>
+                            <input type="text" id="liceu" name="liceu" class="form-input" placeholder="Ex: Colegiul Național Horea">
+                        </div>
                     </div>
 
                     <div class="form-group full">
                         <label class="form-label" for="message">Întrebări sau mesaj (opțional)</label>
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Ex: Am terminat liceul în 2025. Vreau să știu dacă mă pot înscrie la Logistică și dacă există cazare în Alba Iulia..."></textarea>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Ex: Vreau să știu dacă există cazare în Alba Iulia sau dacă pot face practica în orașul meu..."></textarea>
                     </div>
 
                     <div class="form-scarcity">Mai sunt <strong>41 locuri disponibile</strong> în total pe toate programele. Locurile se ocupă prin selecție.</div>
@@ -929,11 +964,21 @@
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    Salariul de 1.500/2.000 lei se plătește și în vacanțe?
+                    Bursa de 1.500/2.000 lei se acordă și în vacanțe?
                     <span class="faq-arrow">▾</span>
                 </button>
                 <div class="faq-answer">
-                    Da, salariul se acordă 12 luni pe an, pe toată durata programului, indiferent de vacanțe sau sesiuni universitare. Acesta este unul dintre avantajele clare față de un job part-time clasic.
+                    Da, bursa se acordă 12 luni pe an, pe toată durata programului, indiferent de vacanțe sau sesiuni universitare. Acesta este unul dintre avantajele clare față de un job part-time clasic.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Care sunt cerințele de admitere?
+                    <span class="faq-arrow">▾</span>
+                </button>
+                <div class="faq-answer">
+                    Condiția de bază este absolvirea liceului cu diplomă de bacalaureat. Admiterea se desfășoară în două etape: selecție la Kaufland (interviu motivațional + evaluare) urmată de admiterea la UAB. Nu există notă minimă de bacalaureat specificată, dar un profil academic solid și motivația sunt criterii importante în selecție. EDMUNDO te pregătește pentru interviul motivațional.
                 </div>
             </div>
 
@@ -968,6 +1013,16 @@
 
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
+    // Burger menu
+    function toggleMenu() {
+        document.getElementById('burger').classList.toggle('open');
+        document.getElementById('nav-links').classList.toggle('open');
+    }
+    function closeMenu() {
+        document.getElementById('burger').classList.remove('open');
+        document.getElementById('nav-links').classList.remove('open');
+    }
+
     // FAQ accordion
     function toggleFaq(btn) {
         const item = btn.parentElement;
