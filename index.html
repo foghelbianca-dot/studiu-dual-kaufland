@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Studiezi, lucrezi și primești bursă lunară simultan. Program de studiu dual universitar Kaufland × UAB Alba Iulia. 41 locuri bugetate, bursă 1.500–2.000 lei/lună.">
+    <meta name="description" content="Studiezi, lucrezi și primești bursă lunară simultan. Program de studiu dual universitar Kaufland × Universitatea „1 Decembrie 1918" din Alba Iulia. 41 locuri bugetate, bursă 1.500–2.000 lei/lună.">
     <title>Studiu Dual Universitar × Kaufland | EDMUNDO</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #0F1729;
-            --blue: #1E3A8A;
-            --red: #E31837;
-            --red-dark: #B91C1C;
-            --light: #F8FAFC;
+            --primary: #1A1A1A;
+            --red: #CC1C33;
+            --red-dark: #A01426;
+            --rose: #FEE2E2;
+            --rose-mid: #FECDD3;
+            --light: #F7F7F7;
             --white: #FFFFFF;
-            --text: #1E293B;
-            --muted: #64748B;
-            --border: #E2E8F0;
-            --gold: #F59E0B;
+            --text: #1A1A1A;
+            --muted: #6B7280;
+            --border: #E5E5E5;
         }
 
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.6; }
@@ -42,29 +42,22 @@
         .burger.open span:nth-child(2) { opacity: 0; }
         .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        /* ─── URGENCY BANNER ─── */
-        .urgency-banner {
-            background: #FEF3C7; border-bottom: 2px solid #F59E0B;
-            padding: 0.6rem 2rem; text-align: center;
-            font-size: 0.9rem; font-weight: 600; color: #92400E;
-        }
-        .urgency-banner span { color: #B45309; }
 
         /* ─── HERO ─── */
         .hero {
-            background: linear-gradient(135deg, #0F1729 0%, #1E3A8A 100%);
+            background: linear-gradient(135deg, #150407 0%, #380D14 100%);
             color: white; padding: 6rem 2rem 4rem; text-align: center;
             position: relative; overflow: hidden;
         }
         .hero::before {
             content: ''; position: absolute; top: -50%; right: -20%;
             width: 600px; height: 600px; border-radius: 50%;
-            background: rgba(227,24,55,0.08); pointer-events: none;
+            background: rgba(204,28,51,0.1); pointer-events: none;
         }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            background: rgba(227,24,55,0.2); border: 1px solid rgba(227,24,55,0.4);
-            color: #FCA5A5; padding: 0.35rem 1rem; border-radius: 100px;
+            background: rgba(204,28,51,0.2); border: 1px solid rgba(204,28,51,0.4);
+            color: #FECDD3; padding: 0.35rem 1rem; border-radius: 100px;
             font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
             margin-bottom: 1.5rem;
         }
@@ -76,9 +69,9 @@
         .hero-sub { font-size: 1.2rem; color: #CBD5E1; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.5; }
         .hero-stats { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
         .hero-stat { text-align: center; }
-        .hero-stat-number { display: block; font-size: 2rem; font-weight: 800; color: var(--gold); }
+        .hero-stat-number { display: block; font-size: 2rem; font-weight: 800; color: var(--rose-mid); }
         .hero-stat-label { font-size: 0.8rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; }
-        .hero-proof { display: inline-block; background: rgba(227,24,55,0.15); border: 1px solid rgba(227,24,55,0.4); border-radius: 8px; padding: 0.65rem 1.4rem; font-size: 0.95rem; font-weight: 600; color: #FCA5A5; margin-bottom: 2.5rem; line-height: 1.5; letter-spacing: 0.01em; }
+        .hero-proof { display: inline-block; background: rgba(204,28,51,0.18); border: 1px solid rgba(204,28,51,0.4); border-radius: 8px; padding: 0.65rem 1.4rem; font-size: 0.95rem; font-weight: 600; color: #FECDD3; margin-bottom: 2.5rem; line-height: 1.5; letter-spacing: 0.01em; }
         .hero-proof-star { color: #E31837; margin-right: 0.4rem; }
         .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
 
@@ -110,7 +103,7 @@
         .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
         .dual-split { border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
         .dual-half { padding: 2.5rem 2rem; }
-        .dual-half:first-child { background: var(--blue); border-radius: 12px 12px 0 0; }
+        .dual-half:first-child { background: var(--red); border-radius: 12px 12px 0 0; }
         .dual-half:last-child { background: var(--red); border-radius: 0 0 12px 12px; }
         .dual-percent { font-size: 3.5rem; font-weight: 900; color: white; line-height: 1; }
         .dual-label { font-size: 1rem; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 0.25rem; }
@@ -135,8 +128,8 @@
         .program-header { padding: 1.5rem 1.5rem 0; }
         .program-badge { display: inline-block; padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; }
         .badge-retail { background: #DBEAFE; color: #1E40AF; }
-        .badge-logistica { background: #DCFCE7; color: #166534; }
-        .badge-robotica { background: #FEF3C7; color: #92400E; }
+        .badge-logistica { background: #F3F4F6; color: #374151; }
+        .badge-robotica { background: #FEE2E2; color: #991B1B; }
         .urgent-badge { display: inline-block; background: #FEE2E2; color: #991B1B; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 100px; margin-left: 0.5rem; }
         .program-title { font-size: 1.2rem; font-weight: 800; color: var(--primary); line-height: 1.3; margin-bottom: 0.25rem; }
         .program-faculty { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.4rem; }
@@ -158,10 +151,10 @@
         /* ─── BENEFITS ─── */
         .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
         .benefit-card { background: white; border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); }
-        .benefit-card--tech { background: #EFF6FF; border-color: #BFDBFE; }
-        .benefit-card--tech .benefit-title { color: #1E3A8A; }
-        .benefit-icon--blue { background: rgba(30,58,138,0.1) !important; }
-        .benefit-icon--blue svg { stroke: #1E3A8A !important; }
+        .benefit-card--tech { background: #FFF1F2; border-color: var(--rose-mid); }
+        .benefit-card--tech .benefit-title { color: var(--red-dark); }
+        .benefit-icon--blue { background: rgba(204,28,51,0.08) !important; }
+        .benefit-icon--blue svg { stroke: var(--red) !important; }
         .benefit-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(227,24,55,0.07); border-radius: 12px; margin-bottom: 1.25rem; }
         .benefit-icon svg { width: 24px; height: 24px; stroke: var(--red); stroke-width: 1.75; }
         .benefit-title { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
@@ -177,7 +170,7 @@
         .year-title { font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 1.5rem; }
         .year-split { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
         .year-bar { height: 10px; border-radius: 5px; flex: 1; }
-        .bar-study { background: #3B82F6; }
+        .bar-study { background: #D1D5DB; }
         .bar-practice { background: var(--red); }
         .year-legend { display: flex; justify-content: center; gap: 1.5rem; font-size: 0.8rem; }
         .legend-item { display: flex; align-items: center; gap: 0.4rem; color: #94A3B8; }
@@ -306,9 +299,9 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
     <div class="container">
-        <div class="hero-badge">✦ Studiu Dual Universitar × Kaufland × UAB Alba Iulia</div>
+        <div class="hero-badge">✦ Studiu Dual Universitar × Kaufland × Univ. „1 Decembrie 1918" Alba Iulia</div>
         <h1>Înveți.<br>Lucrezi.<br><em>Experiență + bursă.</em></h1>
-        <p class="hero-sub">Program de studiu dual universitar în parteneriat cu Kaufland și UAB Alba Iulia: diplomă acreditată, practică reală și bursă lunară plătită de Kaufland din prima zi de facultate.</p>
+        <p class="hero-sub">Program de studiu dual universitar în parteneriat cu Kaufland și Universitatea „1 Decembrie 1918" din Alba Iulia: diplomă acreditată, practică reală și bursă lunară plătită de Kaufland din prima zi de facultate.</p>
         <div class="hero-proof"><span class="hero-proof-star">✦</span> Primii studenți plătiți să învețe în retail din România.</div>
 
         <div class="hero-stats">
@@ -339,7 +332,7 @@
             <span>în parteneriat cu</span>
             <span class="partner-logo-text">KAUFLAND</span>
             <span style="color: #64748B;">×</span>
-            <span class="partner-logo-text">UAB ALBA IULIA</span>
+            <span class="partner-logo-text">UNIV. ALBA IULIA</span>
         </div>
     </div>
 </section>
@@ -353,7 +346,7 @@
 
         <div class="dual-grid">
             <div class="dual-split">
-                <div class="dual-half" style="background: #1E3A8A;">
+                <div class="dual-half" style="background: var(--red);">
                     <div class="dual-percent">50%</div>
                     <div class="dual-label">Teorie academică</div>
                     <div class="dual-desc">Cursuri, seminarii și laboratoare la Universitatea „1 Decembrie 1918" din Alba Iulia, cu diplomă acreditată de Ministerul Educației.</div>
@@ -420,7 +413,7 @@
                 <div class="program-header">
                     <span class="program-badge badge-retail">Management în Retail</span>
                     <h3 class="program-title">Management în Retail</h3>
-                    <div class="program-faculty">Facultatea de Științe Economice, UAB</div>
+                    <div class="program-faculty">Facultatea de Științe Economice, Universitatea „1 Decembrie 1918" din Alba Iulia</div>
                     <div class="program-degree">Diplomă de licență în Științe Economice, domeniul Management <span class="degree-unique">· singura specializare de acest tip la nivel de licență în România</span></div>
                 </div>
                 <div class="program-divider"></div>
@@ -460,7 +453,7 @@
                 <div class="program-header">
                     <span class="program-badge badge-logistica">Logistică</span>
                     <h3 class="program-title">Logistică Operațională</h3>
-                    <div class="program-faculty">Facultatea de Științe Economice, UAB</div>
+                    <div class="program-faculty">Facultatea de Științe Economice, Universitatea „1 Decembrie 1918" din Alba Iulia</div>
                     <div class="program-degree">Diplomă de licență în Științe Economice, domeniul Logistică</div>
                 </div>
                 <div class="program-divider"></div>
@@ -503,7 +496,7 @@
                         <span class="urgent-badge">Sesiune toamnă 2026</span>
                     </div>
                     <h3 class="program-title">Robotică și Automatizări Industriale</h3>
-                    <div class="program-faculty">Facultatea de Informatică și Inginerie, UAB</div>
+                    <div class="program-faculty">Facultatea de Informatică și Inginerie, Universitatea „1 Decembrie 1918" din Alba Iulia</div>
                     <div class="program-degree">Diplomă de licență în Inginerie, domeniul Robotică și Automatizări</div>
                 </div>
                 <div class="program-divider"></div>
@@ -600,7 +593,7 @@
                     <div class="year-bar bar-practice" style="flex: 40;"></div>
                 </div>
                 <div class="year-legend">
-                    <div class="legend-item"><div class="legend-dot" style="background: #3B82F6;"></div> 60% Studii</div>
+                    <div class="legend-item"><div class="legend-dot" style="background: #D1D5DB;"></div> 60% Studii</div>
                     <div class="legend-item"><div class="legend-dot" style="background: #E31837;"></div> 40% Practică</div>
                 </div>
                 <p class="year-desc">Baza academică solidă. Primele activități practice în companie sub supraveghere, integrare în fluxuri reale de lucru.</p>
@@ -614,7 +607,7 @@
                     <div class="year-bar bar-practice" style="flex: 60;"></div>
                 </div>
                 <div class="year-legend">
-                    <div class="legend-item"><div class="legend-dot" style="background: #3B82F6;"></div> 40% Studii</div>
+                    <div class="legend-item"><div class="legend-dot" style="background: #D1D5DB;"></div> 40% Studii</div>
                     <div class="legend-item"><div class="legend-dot" style="background: #E31837;"></div> 60% Practică</div>
                 </div>
                 <p class="year-desc">Implicare crescută în activitate reală, proiecte independente, responsabilități sporite. Teoria devine competență verificată.</p>
@@ -623,7 +616,7 @@
             <div class="year-card">
                 <div class="year-label">La absolvire</div>
                 <div class="year-title">Profesionist</div>
-                <div style="display: flex; justify-content: center; padding: 1.25rem 0;"><span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(245,158,11,0.15);"><i data-lucide="award" style="width:28px;height:28px;stroke:#F59E0B;stroke-width:1.5;"></i></span></div>
+                <div style="display: flex; justify-content: center; padding: 1.25rem 0;"><span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(204,28,51,0.12);"><i data-lucide="award" style="width:28px;height:28px;stroke:var(--red);stroke-width:1.5;"></i></span></div>
                 <p class="year-desc">Diplomă de licență + 3 ani experiență remunerată + vechime profesională recunoscută + acces direct la carieră în Kaufland.</p>
             </div>
         </div>
@@ -662,7 +655,7 @@
                         <div class="step-content">
                             <div class="step-date">17 iulie 2026</div>
                             <div class="step-title">Interviu motivațional</div>
-                            <div class="step-desc">Probe de aptitudini și interviu la UAB Alba Iulia.</div>
+                            <div class="step-desc">Probe de aptitudini și interviu la Universitatea „1 Decembrie 1918" din Alba Iulia.</div>
                         </div>
                     </div>
                     <div class="calendar-step">
@@ -674,7 +667,7 @@
                         </div>
                     </div>
                     <div class="calendar-step">
-                        <div class="step-dot" style="background: var(--blue); border-color: var(--blue); color: white;">✓</div>
+                        <div class="step-dot" style="background: var(--red); border-color: var(--red); color: white;">✓</div>
                         <div class="step-content">
                             <div class="step-date">1 octombrie 2026</div>
                             <div class="step-title">Start program</div>
@@ -700,7 +693,7 @@
                         <div class="step-content">
                             <div class="step-date">Mai–Iulie 2026</div>
                             <div class="step-title">Selecție candidați Kaufland</div>
-                            <div class="step-desc">Interviu online + evaluare la sediul Kaufland sau UAB.</div>
+                            <div class="step-desc">Interviu online + evaluare la sediul Kaufland sau la universitate.</div>
                         </div>
                     </div>
                     <div class="calendar-step">
@@ -708,11 +701,11 @@
                         <div class="step-content">
                             <div class="step-date">24 aug – 11 sept 2026</div>
                             <div class="step-title">Sesiunea de admitere septembrie</div>
-                            <div class="step-desc">Înscriere, probe, rezultate și înmatriculare la Facultatea de Informatică și Inginerie UAB.</div>
+                            <div class="step-desc">Înscriere, probe, rezultate și înmatriculare la Facultatea de Informatică și Inginerie.</div>
                         </div>
                     </div>
                     <div class="calendar-step">
-                        <div class="step-dot" style="background: var(--blue); border-color: var(--blue); color: white;">✓</div>
+                        <div class="step-dot" style="background: var(--red); border-color: var(--red); color: white;">✓</div>
                         <div class="step-content">
                             <div class="step-date">1 octombrie 2026</div>
                             <div class="step-title">Start program</div>
@@ -757,7 +750,7 @@
             </div>
 
             <div class="partner-card">
-                <div class="partner-name">UAB Alba Iulia</div>
+                <div class="partner-name">Universitatea „1 Decembrie 1918" din Alba Iulia</div>
                 <div class="partner-sub">Universitatea „1 Decembrie 1918", instituție publică acreditată ARACIS cu calificativ „Înaltă Încredere", 5 facultăți, 4 școli doctorale și 190+ parteneriate internaționale Erasmus+.</div>
                 <div class="partner-stats">
                     <div class="partner-stat">
@@ -925,11 +918,11 @@
         <div class="faq-list">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    Trebuie să fiu deja admis la UAB ca să aplic la studiul dual?
+                    Trebuie să fiu deja admis la universitate ca să aplic la studiul dual?
                     <span class="faq-arrow">▾</span>
                 </button>
                 <div class="faq-answer">
-                    Nu. Procesul de admitere se desfășoară în două etape: selecția la Kaufland (interviu motivațional + evaluare), urmată de admiterea la UAB. EDMUNDO te ghidează prin toți pașii, inclusiv pregătirea pentru interviul motivațional.
+                    Nu. Procesul de admitere se desfășoară în două etape: selecția la Kaufland (interviu motivațional + evaluare), urmată de admiterea la Universitatea „1 Decembrie 1918" din Alba Iulia. EDMUNDO te ghidează prin toți pașii, inclusiv pregătirea pentru interviul motivațional.
                 </div>
             </div>
 
@@ -939,7 +932,7 @@
                     <span class="faq-arrow">▾</span>
                 </button>
                 <div class="faq-answer">
-                    Da. UAB pune la dispoziție 800+ locuri de cazare în 5 cămine studențești cu standarde europene și o cantină modernă cu 200 locuri. Pentru Management în Retail, practica poate fi efectuată în magazinul Kaufland din orașul tău de domiciliu, acolo unde este posibil.
+                    Da. Universitatea „1 Decembrie 1918" din Alba Iulia pune la dispoziție 800+ locuri de cazare în 5 cămine studențești cu standarde europene și o cantină modernă cu 200 locuri. Pentru Management în Retail, practica poate fi efectuată în magazinul Kaufland din orașul tău de domiciliu, acolo unde este posibil.
                 </div>
             </div>
 
@@ -979,7 +972,7 @@
                     <span class="faq-arrow">▾</span>
                 </button>
                 <div class="faq-answer">
-                    Condiția de bază este absolvirea liceului cu diplomă de bacalaureat. Admiterea se desfășoară în două etape: selecție la Kaufland (interviu motivațional + evaluare) urmată de admiterea la UAB. Nu există notă minimă de bacalaureat specificată, dar un profil academic solid și motivația sunt criterii importante în selecție. EDMUNDO te pregătește pentru interviul motivațional.
+                    Condiția de bază este absolvirea liceului cu diplomă de bacalaureat. Admiterea se desfășoară în două etape: selecție la Kaufland (interviu motivațional + evaluare) urmată de admiterea la universitate. Nu există notă minimă de bacalaureat specificată, dar un profil academic solid și motivația sunt criterii importante în selecție. EDMUNDO te pregătește pentru interviul motivațional.
                 </div>
             </div>
 
@@ -1005,7 +998,7 @@
         </div>
         <ul class="footer-links">
             <li><a href="https://cariere.kaufland.ro/inceputul-carierei/studiu-dual-universitar" target="_blank">Kaufland Cariere</a></li>
-            <li><a href="https://www.uab.ro" target="_blank">Universitatea UAB</a></li>
+            <li><a href="https://www.uab.ro" target="_blank">Universitatea „1 Decembrie 1918"</a></li>
             <li><a href="https://www.uab.ro/postari/475-admitere-licenta-calendarul-admiterii/" target="_blank">Calendar admitere</a></li>
             <li><a href="#contact">Contact EDMUNDO</a></li>
         </ul>
