@@ -45,7 +45,7 @@
 
         /* ─── HERO ─── */
         .hero {
-            background: linear-gradient(135deg, #3D444E 0%, #5A6370 100%);
+            background: linear-gradient(135deg, #0B2560 0%, #1A3D8F 100%);
             color: white; padding: 6rem 2rem 4rem; text-align: center;
             position: relative; overflow: hidden;
         }
@@ -88,9 +88,13 @@
             display: inline-flex; align-items: center; gap: 0.5rem;
         }
         .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.05); }
-        .partner-logos { display: flex; justify-content: center; align-items: center; gap: 2rem; opacity: 0.7; }
-        .partner-logos span { font-size: 0.8rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; }
-        .partner-logo-text { font-size: 1.1rem; font-weight: 800; color: white; }
+        .partner-logos { display: flex; justify-content: center; align-items: center; gap: 2rem; margin-top: 0.5rem; }
+        .partner-logos-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
+        .partner-logos-sep { color: rgba(255,255,255,0.3); font-size: 1.2rem; }
+        .partner-logo-kaufland { background: var(--red); color: white; font-size: 0.85rem; font-weight: 800; padding: 0.4rem 1rem; border-radius: 6px; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem; }
+        .partner-logo-kaufland span { background: white; color: var(--red); width: 18px; height: 18px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 900; }
+        .partner-logo-uab { color: white; font-size: 0.85rem; font-weight: 800; line-height: 1.2; text-align: center; border: 1px solid rgba(255,255,255,0.3); padding: 0.4rem 1rem; border-radius: 6px; }
+        .partner-logo-uab small { font-size: 0.65rem; font-weight: 400; opacity: 0.7; display: block; }
 
         /* ─── SECTIONS ─── */
         section { padding: 5rem 2rem; }
@@ -161,7 +165,7 @@
         .benefit-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
 
         /* ─── TIMELINE ─── */
-        .timeline-section { background: linear-gradient(135deg, #3D444E 0%, #5A6370 100%); color: white; }
+        .timeline-section { background: linear-gradient(135deg, #0B2560 0%, #1A3D8F 100%); color: white; }
         .timeline-section .section-title { color: white; }
         .timeline-section .section-desc { color: #94A3B8; }
         .years-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
@@ -170,7 +174,7 @@
         .year-title { font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 1.5rem; }
         .year-split { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
         .year-bar { height: 10px; border-radius: 5px; flex: 1; }
-        .bar-study { background: #D1D5DB; }
+        .bar-study { background: rgba(255,255,255,0.35); }
         .bar-practice { background: var(--red); }
         .year-legend { display: flex; justify-content: center; gap: 1.5rem; font-size: 0.8rem; }
         .legend-item { display: flex; align-items: center; gap: 0.4rem; color: #94A3B8; }
@@ -250,9 +254,10 @@
         .faq-item.open .faq-answer { display: block; }
 
         /* ─── FOOTER ─── */
-        footer { background: #050B18; color: #94A3B8; padding: 3rem 2rem; }
+        footer { background: #0B2560; color: #94A3B8; padding: 3rem 2rem; }
         .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-        .footer-brand img { height: 36px; width: auto; filter: brightness(0) invert(1); }
+        .footer-brand { background: white; padding: 0.4rem 1rem; border-radius: 8px; display: inline-block; }
+        .footer-brand img { height: 32px; width: auto; display: block; }
         .footer-text { font-size: 0.8rem; line-height: 1.6; margin-top: 0.4rem; }
         .footer-links { display: flex; gap: 2rem; list-style: none; }
         .footer-links a { color: #94A3B8; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
@@ -329,10 +334,10 @@
         </div>
 
         <div class="partner-logos">
-            <span>în parteneriat cu</span>
-            <span class="partner-logo-text">KAUFLAND</span>
-            <span style="color: #64748B;">×</span>
-            <span class="partner-logo-text">UNIV. ALBA IULIA</span>
+            <span class="partner-logos-label">în parteneriat cu</span>
+            <div class="partner-logo-kaufland"><span>K</span> Kaufland</div>
+            <span class="partner-logos-sep">×</span>
+            <div class="partner-logo-uab">UAB<br><small>1 Decembrie 1918</small></div>
         </div>
     </div>
 </section>
@@ -346,12 +351,12 @@
 
         <div class="dual-grid">
             <div class="dual-split">
-                <div class="dual-half" style="background: var(--red);">
+                <div class="dual-half" style="background: #0B2560;">
                     <div class="dual-percent">50%</div>
                     <div class="dual-label">Teorie academică</div>
                     <div class="dual-desc">Cursuri, seminarii și laboratoare la Universitatea „1 Decembrie 1918" din Alba Iulia, cu diplomă acreditată de Ministerul Educației.</div>
                 </div>
-                <div class="dual-half" style="background: #E31837;">
+                <div class="dual-half" style="background: var(--red);">
                     <div class="dual-percent">50%</div>
                     <div class="dual-label">Practică în Kaufland</div>
                     <div class="dual-desc">Activitate remunerată în magazine sau centre logistice Kaufland, sub îndrumarea unui mentor dedicat din prima zi.</div>
@@ -718,62 +723,6 @@
     </div>
 </section>
 
-<!-- ─── PARTENERI ─── -->
-<section id="parteneri">
-    <div class="container">
-        <p class="section-label">În spatele programului</p>
-        <h2 class="section-title">Parteneri cu anvergură</h2>
-        <p class="section-desc">Două instituții cu greutate, unite de aceeași misiune: un traseu educațional conectat la realitatea pieței muncii.</p>
-
-        <div class="partners-grid">
-            <div class="partner-card">
-                <div class="partner-name">Kaufland România</div>
-                <div class="partner-sub">Lanț de retail cu prezență națională și inițiatorul programului de studiu dual în România. Din 2005, Kaufland deschide 10–15 magazine noi pe an, o companie care investește în oameni înainte de a-i angaja.</div>
-                <div class="partner-stats">
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">20+</span>
-                        <span class="partner-stat-lbl">Ani în România</span>
-                    </div>
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">10–15</span>
-                        <span class="partner-stat-lbl">Magazine noi/an</span>
-                    </div>
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">33</span>
-                        <span class="partner-stat-lbl">Studenți prima ediție</span>
-                    </div>
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">2025</span>
-                        <span class="partner-stat-lbl">Prima ediție lansată</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="partner-card">
-                <div class="partner-name">Universitatea „1 Decembrie 1918" din Alba Iulia</div>
-                <div class="partner-sub">Universitatea „1 Decembrie 1918", instituție publică acreditată ARACIS cu calificativ „Înaltă Încredere", 5 facultăți, 4 școli doctorale și 190+ parteneriate internaționale Erasmus+.</div>
-                <div class="partner-stats">
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">1991</span>
-                        <span class="partner-stat-lbl">An fondare</span>
-                    </div>
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">5</span>
-                        <span class="partner-stat-lbl">Facultăți</span>
-                    </div>
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">800+</span>
-                        <span class="partner-stat-lbl">Locuri cămin</span>
-                    </div>
-                    <div class="partner-stat">
-                        <span class="partner-stat-num">190+</span>
-                        <span class="partner-stat-lbl">Parteneriate int.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ─── CARIERE ─── -->
 <section id="cariere">
@@ -893,14 +842,11 @@
                         <textarea id="message" name="message" class="form-textarea" placeholder="Ex: Vreau să știu dacă există cazare în Alba Iulia sau dacă pot face practica în orașul meu..."></textarea>
                     </div>
 
-                    <div class="form-scarcity">Mai sunt <strong>41 locuri disponibile</strong> în total pe toate programele. Locurile se ocupă prin selecție.</div>
-
                     <button type="submit" class="form-submit" id="submit-btn">
                         Vreau să fiu contactat de consultant →
                     </button>
 
                     <p class="form-privacy">
-                        Datele tale sunt în siguranță. Nu le împărtășim cu terți.<br>
                         Prin completarea formularului ești de acord cu <a href="#">Politica de confidențialitate</a> EDMUNDO.
                     </p>
                 </form>
